@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2021 Hallo Welt Systeme UG
+// Copyright (C) 2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,19 +13,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_binary {
-    relative_install_path: "hw",
-    defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.mt6763",
-    init_rc: ["android.hardware.light@2.0-service.mt6763.rc"],
-    srcs: ["service.cpp", "Light.cpp"],
-    vendor: true,
-    shared_libs: [
-        "libbase",
-        "libhardware",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "android.hardware.light@2.0",
+cc_library_shared {
+    name: "libshim_vtservice",
+    srcs: ["libshim_vtservice.cpp"],
+    shared_libs: ["libaudioclient"],
+    header_libs: [
+        "libaudioclient_headers",
+        "libmedia_headers",
+        "libmediametrics_headers",
     ],
+}
+
+java_library {
+    name: "ImsServiceBase",
+    installable: true,
+    srcs: ["ImsServiceBase.java"],
 }
