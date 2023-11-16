@@ -130,16 +130,14 @@ vendor/bin/gsm0710muxd
 vendor/etc/init/gsm0710muxd.rc
 vendor/lib/libccci_util.so
 vendor/lib/hw/audio.r_submix.mt6763.so
-vendor/lib/hw/audio.usb.mt6763.so
 vendor/lib64/hw/audio.r_submix.mt6763.so
-vendor/lib64/hw/audio.usb.mt6763.so
 vendor/bin/audiocmdservice_atci
 vendor/etc/init/audiocmdservice_atci.rc
 
 # Audio-Hardware (HIDL) - from KF6J RP1A.200720.011
 vendor/bin/hw/android.hardware.audio@5.0-service-mediatek|7d8173d321717056f1aad4ee5250cd23d0152780
 vendor/etc/init/android.hardware.audio@5.0-service-mediatek.rc|d2f25ca256ef25f6b98f38431d545fe671cf76b3
-vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so|066d59c5ba973df968a4c8665a0c6e0f2355656b
+vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so|53b3a0899a7a77d15bada842f1158c8c24f013ae
 vendor/lib/vendor.mediatek.hardware.audio@5.1.so|8bf798ce812ea43cfc3595d64c47cd2bac3415f8
 vendor/lib/libaudioprimarydevicehalifclient.so|5d51ea04be6da3066c5e1fffa546b6dd8ee4cc75
 vendor/lib64/hw/android.hardware.audio@5.0-impl-mediatek.so|cfb593dbc25eec99692a454ba0da43d519b415cb
@@ -152,11 +150,7 @@ vendor/bin/aee_aedv|0939311498b2c3a7762f4ba7b1388eb082488e0e
 vendor/bin/aee_aedv64|867e542722fa804eccd5ab984de882c5abd71563
 vendor/bin/aee_dumpstatev|edc3d114292985547a8650d826ebc80f2ffaf842
 vendor/etc/aee-config|0253ad6dd8148a58f65dbea3b2cfe827448cf6d5
-vendor/etc/init/aee_aedv.rc|583f368556b910222456e60ece22a5e212351bfb
-vendor/etc/init/aee_aedv64.rc|2e92b573babf526b310364d5f1c3110c42681385
-vendor/lib/libladder.so|029d0a8392c8bb526448be8a4e188ecc6994c067
 vendor/lib/libaedv.so|6ca87e36505989bbede14731512283eb8eb14478
-vendor/lib64/libladder.so|2d83f0a98be3e6bd068c15e7f649836d794fae4b
 vendor/lib64/libaedv.so|89e307791fc7c2e5dc25ebb61e78823f5dfb9fb9
 
 # Bluetooth
@@ -659,6 +653,10 @@ lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
 lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
+# AEE - from ossi SP1A.210812.016
+vendor/lib/libladder.so|e566b0a7c26c9fba19f637de069dadf0631de6f2
+vendor/lib64/libladder.so|892d3a6753db4bb44d5a662d0994e3b3c7ab267e
+
 # MTK-IMS-R - from KF6J RP1A.200720.011
 lib/libcomutils.so|077843d82d8689718d99542cee113cf2000f9243
 lib/libsignal.so|b52ca9eefa845d7801f6515511ca863ed7acb796
@@ -712,8 +710,6 @@ vendor/lib64/libwifitest.so
 # Power (Hardware)
 vendor/bin/hw/power_legacy_test_v_1_0
 vendor/bin/hw/power_native_test_v_1_0
-vendor/etc/powercontable.xml
-vendor/etc/powerscntbl.xml
 vendor/lib/hw/power.mt6763.so
 vendor/lib64/hw/power.mt6763.so
 
@@ -728,7 +724,7 @@ vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
 
 # Power (Interfaces - android)
 vendor/lib/hw/android.hardware.power@1.3-impl-mediatek.so
-vendor/lib64/hw/android.hardware.power@1.3-impl-mediatek.so
+vendor/lib64/hw/android.hardware.power@1.3-impl-mediatek.so|d5c52bdba38d06def51463dc077fc4e8303a83fe
 
 # Power (Interfaces - vendor.mediatek)
 vendor/lib/hw/vendor.mediatek.hardware.power@2.1-impl.so
@@ -781,7 +777,7 @@ vendor/lib/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib/vendor.mediatek.hardware.pq@2.3.so
-vendor/lib64/libmtk-ril.so
+vendor/lib64/libmtk-ril.so|c839e772c5879a5174b440e80c6b8a5394cffc84
 vendor/etc/factory.ini
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_OP01.xml

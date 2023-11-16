@@ -91,7 +91,7 @@ on charger
 
     start servicemanager
     start hwservicemanager
-    start light-hal-2-0
+    start vendor.light-hal-2-0
     start health-hal-2-0
 
 on fs
@@ -818,7 +818,7 @@ on property:sys.boot_completed=1
     write /dev/stune/background/schedtune.boost 0
     write /dev/stune/top-app/schedtune.boost 0
     write /dev/stune/rt/schedtune.boost 0
-    write /sys/devices/system/cpu/eas/enable 2
+    write /sys/devices/system/cpu/eas/enable 1
     write /proc/cpufreq/cpufreq_sched_disable 0
     chown system system /dev/stune/foreground/schedtune.prefer_idle
     chown system system /dev/stune/top-app/schedtune.prefer_idle

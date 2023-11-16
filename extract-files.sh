@@ -33,6 +33,21 @@ function blob_fixup() {
         lib/libsink.so)
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
+        vendor/lib64/libmtkcam_stdutils.so)
+            "${PATCHELF}" --add-needed "libshim_mtkcam.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
+            "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
+            ;;
+        lib/libmtk_vt_service.so)
+            "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
+            ;;
+        lib/libshowlogo.so)
+            "${PATCHELF}" --add-needed "libshim_showlogo.so" "${2}"
+            ;;
+        vendor/etc/agps_profiles_conf2.xml)
+            sed -i 's|imsi_enable="true"|imsi_enable="false"|' "${2}"
+            ;;
     esac
 }
 
